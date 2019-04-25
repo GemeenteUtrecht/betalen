@@ -1,11 +1,11 @@
 openapi: 3.0.2
 info:
   description: |
-    Welkom inovator!, 
-    Fijn dat je de tijd en moeite hebt genomen om je te verdiepen in dit component 
+    Welkom inovator! <br>
+    Fijn dat je de tijd en moeite hebt genomen om je te verdiepen in dit component. 
     
-    # Introduction                
-    De Trouwen component is ontwikkeld voor de gemeente Utrecht en heeft als doel het aansluiten [NLX](https://nlx.io/), volgens het [Common Ground](https://vng.nl/samen-organiseren/common-ground) principe, samen spelen, samen delen.
+    # Introductie               
+    Het "betalen" component is ontwikkeld voor de gemeente Utrecht en heeft als doel een betalingen te registreren en af te handelen voor objecten uit andere componenten. Dit stelt je in staat om voor deze objecten facturen aan te maken en te beheren.
     
     # Common ground en open source
     Om het voor andere partijen zo makkelijk mogenlijk te maken dit component bieden we zo veel mogenlijk informatie openbaar aan.  
@@ -45,10 +45,10 @@ info:
 paths:
   /facturen:
     get:
+      summary: 'Haalt een verzameling van facturen op'
       tags:
         - Factuur
       operationId: getFactuurCollection
-      summary: 'Retrieves the collection of Factuur resources.'
       responses:
         200:
           description: 'Factuur collection response'
@@ -70,10 +70,10 @@ paths:
                   $ref: '#/components/schemas/Factuur'
       parameters: []
     post:
+      summary: 'Maak een factuur aan'
       tags:
         - Factuur
       operationId: postFactuurCollection
-      summary: 'Creates a Factuur resource.'
       responses:
         201:
           description: 'Factuur resource created'
@@ -111,10 +111,10 @@ paths:
         description: 'The new Factuur resource'
   '/facturen/{id}':
     get:
+      summary: 'Haalt een specifieke factuur op'
       tags:
         - Factuur
       operationId: getFactuurItem
-      summary: 'Retrieves a Factuur resource.'
       parameters:
         -
           name: id
@@ -138,10 +138,10 @@ paths:
         404:
           description: 'Resource not found'
     put:
+      summary: 'Vervang een specifieke factuur'
       tags:
         - Factuur
       operationId: putFactuurItem
-      summary: 'Replaces the Factuur resource.'
       parameters:
         -
           name: id
@@ -193,7 +193,7 @@ paths:
         400:
           description: 'Ongeldige aanvraag'
         404:
-          description: 'Huwelijk of aanvraag niet gevonden'
+          description: 'Factuur niet gevonden'
       tags:
         - Factuur
       operationId: logFactuurItem
@@ -662,10 +662,10 @@ paths:
         description: 'The updated FactuurRegel resource'
   /organisaties:
     get:
+      summary: 'Haal een verzameling van organisatie resources op'
       tags:
         - Organisatie
       operationId: getOrganisatieCollection
-      summary: 'Retrieves the collection of Organisatie resources.'
       responses:
         200:
           description: 'Organisatie collection response'
@@ -687,10 +687,10 @@ paths:
                   $ref: '#/components/schemas/Organisatie'
       parameters: []
     post:
+      summary: 'Maak een organisatie resource aan'
       tags:
         - Organisatie
       operationId: postOrganisatieCollection
-      summary: 'Creates a Organisatie resource.'
       responses:
         201:
           description: 'Organisatie resource created'
@@ -728,10 +728,10 @@ paths:
         description: 'The new Organisatie resource'
   '/organisaties/{id}':
     get:
+      summary: 'Haal een specifieke organisatie resource op'
       tags:
         - Organisatie
       operationId: getOrganisatieItem
-      summary: 'Retrieves a Organisatie resource.'
       parameters:
         -
           name: id
@@ -755,10 +755,10 @@ paths:
         404:
           description: 'Resource not found'
     put:
+      summary: 'Vervang een specifieke organisatie resource'
       tags:
         - Organisatie
       operationId: putOrganisatieItem
-      summary: 'Replaces the Organisatie resource.'
       parameters:
         -
           name: id
@@ -796,10 +796,10 @@ paths:
               $ref: '#/components/schemas/Organisatie'
         description: 'The updated Organisatie resource'
     delete:
+      summary: 'Verwijder een specifieke organisatie resource'
       tags:
         - Organisatie
       operationId: deleteOrganisatieItem
-      summary: 'Removes the Organisatie resource.'
       responses:
         204:
           description: 'Organisatie resource deleted'
@@ -840,7 +840,7 @@ paths:
             type: string
   '/organisaties/{id}/revert/{version}':
     post:
-      summary: 'Versie terugdraaid'
+      summary: 'Versie terugdraaien'
       description: 'Herstel een eerdere versie van dit object. Dit is een destructieve actie die niet ongedaan kan worden gemaakt'
       consumes:
         - application/json
@@ -1146,7 +1146,7 @@ components:
           maxLength: 255
           minLength: 8
           example: john@do.nl
-          description: 'Het email addres van deze organisatie <br /><b>Schema:</b> <a href="https://schema.org/email">https://schema.org/email</a>'
+          description: 'Het emailadres van deze organisatie <br /><b>Schema:</b> <a href="https://schema.org/email">https://schema.org/email</a>'
         telefoonnummer:
           type: string
           maxLength: 255
@@ -1229,7 +1229,7 @@ components:
           maxLength: 255
           minLength: 8
           example: john@do.nl
-          description: 'Het email addres van deze organisatie <br /><b>Schema:</b> <a href="https://schema.org/email">https://schema.org/email</a>'
+          description: 'Het emailadres van deze organisatie <br /><b>Schema:</b> <a href="https://schema.org/email">https://schema.org/email</a>'
         telefoonnummer:
           type: string
           maxLength: 255
@@ -1302,7 +1302,7 @@ components:
           maxLength: 255
           minLength: 8
           example: john@do.nl
-          description: 'Het email addres van deze organisatie <br /><b>Schema:</b> <a href="https://schema.org/email">https://schema.org/email</a>'
+          description: 'Het emailadres van deze organisatie <br /><b>Schema:</b> <a href="https://schema.org/email">https://schema.org/email</a>'
         telefoonnummer:
           type: string
           maxLength: 255
@@ -1321,13 +1321,13 @@ components:
         - beschrijving
     'User-user_user:read':
       type: object
-      description: 'A user, as unique signed in individual who might be a member of an organisation.'
+      description: 'Een user of applicatie is een unique geidentificeerde entiteit wat een onderdeel van een organisatie kan zijn.'
       properties:
         fullname:
           type: string
     'User-user_user:write':
       type: object
-      description: 'A user, as unique signed in individual who might be a member of an organisation.'
+      description: 'Een user of applicatie is een unique geidentificeerde entiteit wat een onderdeel van een organisatie kan zijn.'
       properties:
         fullname:
           type: string
@@ -1352,9 +1352,6 @@ tags:
   -
     name: Organisatie
     description: 'De Organisatie wordt gebruikt om standaard configuraties in te regelen'
-  -
-    name: User
-    description: 'Een gebruiker, of in dit geval een applicatie gebonden aan een JWT token behorende tot een organisatie'
 x-tagGroups:
   -
     name: Betalen
@@ -1364,4 +1361,3 @@ x-tagGroups:
     name: Organisatie
     tags:
       - Organisatie
-      - User

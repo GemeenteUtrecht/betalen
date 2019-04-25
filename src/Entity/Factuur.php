@@ -23,7 +23,7 @@ use ActivityLogBundle\Entity\Interfaces\StringableInterface;
  * @version    	1.0
  *
  * @link   		http//:www.conduction.nl
- * @package		Commen Ground
+ * @package		Common Ground
  * @subpackage  Financien
  * 
  *  @ApiResource( 
@@ -33,6 +33,7 @@ use ActivityLogBundle\Entity\Interfaces\StringableInterface;
  *  		"denormalizationContext"={"groups"={"write"}},
  *      	"path"="/facturen",
  *  		"openapi_context" = {
+ * 				"summary" = "Haalt een verzameling van facturen op"
  *  		}
  *  	},
  *  	"post"={
@@ -40,6 +41,7 @@ use ActivityLogBundle\Entity\Interfaces\StringableInterface;
  *  		"denormalizationContext"={"groups"={"write"}},
  *      	"path"="/facturen",
  *  		"openapi_context" = {
+ * 					"summary" = "Maak een factuur aan"
  *  		}
  *  	}
  *  },
@@ -49,6 +51,7 @@ use ActivityLogBundle\Entity\Interfaces\StringableInterface;
  *  		"denormalizationContext"={"groups"={"write"}},
  *      	"path"="/facturen/{id}",
  *  		"openapi_context" = {
+ * 				"summary" = "Haalt een specifieke factuur op"
  *  		}
  *  	},
  *     "put"={
@@ -56,6 +59,7 @@ use ActivityLogBundle\Entity\Interfaces\StringableInterface;
  *  		"denormalizationContext"={"groups"={"write"}},
  *      	"path"="/facturen/{id}",
  *  		"openapi_context" = {
+ * 				"summary" = "Vervang een specifieke factuur"
  *  		}
  *  	},
  *     "log"={
@@ -82,7 +86,7 @@ use ActivityLogBundle\Entity\Interfaces\StringableInterface;
  *         				"description" = "Ongeldige aanvraag"
  *         			},
  *         			"404" = {
- *         				"description" = "Huwelijk of aanvraag niet gevonden"
+ *         				"description" = "Factuur niet gevonden"
  *         			}
  *            	}            
  *         }
