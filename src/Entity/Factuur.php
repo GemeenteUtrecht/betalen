@@ -70,7 +70,7 @@ use ActivityLogBundle\Entity\Interfaces\StringableInterface;
  *     		"denormalization_context"={"groups"={"write"}},
  *         	"openapi_context" = {
  *         		"summary" = "Logboek inzien",
- *         		"description" = "Geeft een array van eerdere versies en wijzigingen van dit object",
+ *         		"description" = "Geeft een array van eerdere versies en wijzigingen van deze Factuur",
  *          	"consumes" = {
  *              	"application/json",
  *               	"text/html",
@@ -129,7 +129,7 @@ class Factuur implements StringableInterface
 	 *             "required"="true",
 	 *             "maxLength"=14,
 	 *             "minLength"=1,
-	 *             "description"="Het RSIN van de Niet-natuurlijk persoon zijnde de organisatie die dit huwelijk heeft gecreeerd. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef"
+	 *             "description"="Het RSIN van de Niet-natuurlijk persoon zijnde de organisatie die dit document heeft gecreeerd. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef"
 	 *         }
 	 *     }
 	 * )
@@ -137,7 +137,7 @@ class Factuur implements StringableInterface
 	public $referentie;
 	
 	/**
-	 * De unieke identificatie van dit object binnen de organisatie die dit object heeft gecreeerd. <br /><b>Schema:</b> <a href="https://schema.org/identifier">https://schema.org/identifier</a>
+	 * De unieke identificatie van de factuur binnen de organisatie die deze Factuur heeft gecreeerd. <br /><b>Schema:</b> <a href="https://schema.org/identifier">https://schema.org/identifier</a>
 	 *
 	 * @var string
 	 * @ORM\Column(
@@ -155,7 +155,7 @@ class Factuur implements StringableInterface
 	 *         "openapi_context"={
 	 *             "type"="string",
 	 *             "example"="6a36c2c4-213e-4348-a467-dfa3a30f64aa",
-	 *             "description"="De unieke identificatie van dit object de organisatie die dit object heeft gecreeerd.",
+	 *             "description"="De unieke identificatie van de factuur binnen de organisatie die deze Factuur heeft gecreeerd.",
 	 *             "maxLength"=40
 	 *         }
 	 *     }
