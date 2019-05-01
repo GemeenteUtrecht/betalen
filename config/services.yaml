@@ -23,8 +23,8 @@ parameters:
                 - [datamodel als pdf](/schema/datamodel.pdf)
                 - [datamodel als mwb](/schema/datamodel.mwb)
                 - [codebase op github](https://github.com/GemeenteUtrecht/betalen)
-                - [codebase als zip](https://github.com/GemeenteUtrecht/betalen/archive/conduction.zip)
-                - [docker container](https://cloud.docker.com/u/huwelijksplanner/repository/docker/huwelijksplanner/betalen-php)
+                - [codebase als zip](https://github.com/GemeenteUtrecht/betalen/archive/master.zip)
+                - [docker container](https://hub.docker.com/r/huwelijksplanner/betalen-component)
                 - [online demo](http://betalen.demo.zaakonline.nl/)
 
                 # OpenAPI Specification, Cross-Origin Resource Sharing en linked Data
@@ -33,7 +33,7 @@ parameters:
 
                 # Authenticatie
 
-                Trouwplanner heeft twee vormen van authenticatie:
+                Het betalen component heeft twee vormen van authenticatie:
                   - API Key
                   - OAuth2
                 OAuth2 - is een open protocol wat veilige authorizatie regeld op een simpele en  gestandarizeerde manier voor het web, mobile en desktop applicaties.
