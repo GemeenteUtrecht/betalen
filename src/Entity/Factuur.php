@@ -155,7 +155,7 @@ class Factuur implements StringableInterface
 	public $identificatie;
 	
 	/**
-	 * Het RSIN van de organisatie waartoe deze Ambtenaar behoord. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef. <br> Het RSIN word bepaald aan de hand van de gauthenticeerde applicatie en kan niet worden overschreven
+	 * Het RSIN van de organisatie waartoe deze Factuur behoord. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef. <br> Het RSIN word bepaald aan de hand van de gauthenticeerde applicatie en kan niet worden overschreven
 	 *
 	 * @var integer
 	 * @ORM\Column(
@@ -214,7 +214,7 @@ class Factuur implements StringableInterface
 	public $wijzigingsdatum;
 	
 	/**
-	 * Het contact persoon voor deze ambtenaar
+	 * Het contact persoon voor deze Factuur
 	 *
 	 * @ORM\Column(
 	 *     type     = "string",
