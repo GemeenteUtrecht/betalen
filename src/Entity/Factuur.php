@@ -238,15 +238,15 @@ class Factuur implements StringableInterface
 	public $contactPersoon;
 	
 	/**
-	 * Met eigenaar wordt bijgehouden welke  applicatie verantwoordelijk is voor het object, en daarvoor de rechten beheerd en uitgeeft. In die zin moet de eigenaar dan ook worden gezien in de trant van autorisatie en configuratie in plaats van als onderdeel van het datamodel.
+	 * De applicatie die verantwoordelijk is voor het object, en daarvoor de rechten beheerd en uitgeeft, en het eindoordeel heeft met betrekking tot waarheidsvinding.. Een model nuancering waarbij we niet alleen moeten weten welke organisatie over een object gaat, maar ook welke applicatie binnen de organisatie.
 	 *
-	 * @var App\Entity\Applicatie $eigenaar
+	 * @var App\Entity\Applicatie $bronApplicaite
 	 *
 	 * @Gedmo\Blameable(on="create")
 	 * @ORM\ManyToOne(targetEntity="App\Entity\Applicatie")
 	 * @Groups({"read"})
 	 */
-	public $eigenaar;
+	public $bronApplicaite;
 	
 	/**
 	 * @return string
