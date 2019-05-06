@@ -22,7 +22,7 @@ parameters:
                 Wordt lid van het slackkanaal [https://zaakonline.slack.com](https://zaakonline.slack.com) voor ondersteuning door het ontwikkel team en regelmatige updates over de ontwikkelingen op het gebied van de zaakonline componenten.
                 
                 # Common ground en open source
-                Om het voor andere partijen zo makkelijk mogenlijk te maken dit component bieden we zo veel mogenlijk informatie openbaar aan.  
+                Om het voor alle partijen zo makkelijk mogelijk te maken, stellen we zo veel mogelijk informatie over dit component openbaar beschikbaar.
                 - [datamodel als pdf](/schema/datamodel.pdf)
                 - [datamodel als mwb](/schema/datamodel.mwb)
                 - [codebase op github](https://github.com/GemeenteUtrecht/betalen)
@@ -65,7 +65,7 @@ parameters:
                 
                 JWT Tokens kunnen zowel worden verlengd, als opnieuw worden aangevraagd, dit aan de hand van de applicatie id en sleutel.
                 
-                Let er bij het meegeven van JWT tokens op dat deze vooraf gedaan moeten worden door een Bearer en een spatie, onder de header Authorization. De volledig naam wordt daarmee: 'Authorization: Bearer [TOKEN]'
+                Let er bij het meegeven van JWT tokens op dat deze voorafgedaan moeten worden door een Bearer en een spatie, onder de header Authorization. De volledig naam wordt daarmee: 'Authorization: Bearer [TOKEN]'
 
             version: 0.0.1
             title: 'Betaling API'
