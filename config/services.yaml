@@ -65,7 +65,7 @@ parameters:
                 
                 JWT Tokens kunnen zowel worden verlengd, als opnieuw worden aangevraagd, dit aan de hand van de applicatie id en sleutel.
                 
-                Let er bij het meegeven van JWT tokens op dat deze voorafgedaan moeten worden door een Bearer en een spatie, onder de header Authorization. De volledig naam wordt daarmee: 'Authorization: Bearer [TOKEN]'
+                Let er bij het meegeven van JWT tokens op dat deze voorafgegaan moeten worden door een Bearer en een spatie, onder de header Authorization. De volledig naam wordt daarmee: 'Authorization: Bearer [TOKEN]'
 
             version: 0.0.1
             title: 'Betaling API'

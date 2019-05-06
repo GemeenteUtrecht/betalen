@@ -11,7 +11,7 @@ info:
     Wordt lid van het slackkanaal [https://zaakonline.slack.com](https://zaakonline.slack.com) voor ondersteuning door het ontwikkel team en regelmatige updates over de ontwikkelingen op het gebied van de zaakonline componenten.
     
     # Common ground en open source
-    Om het voor andere partijen zo makkelijk mogenlijk te maken dit component bieden we zo veel mogenlijk informatie openbaar aan.  
+    Om het voor alle partijen zo makkelijk mogelijk te maken, stellen we zo veel mogelijk informatie over dit component openbaar beschikbaar.
     - [datamodel als pdf](/schema/datamodel.pdf)
     - [datamodel als mwb](/schema/datamodel.mwb)
     - [codebase op github](https://github.com/GemeenteUtrecht/betalen)
@@ -54,7 +54,7 @@ info:
     
     JWT Tokens kunnen zowel worden verlengd, als opnieuw worden aangevraagd, dit aan de hand van de applicatie id en sleutel.
     
-    Let er bij het meegeven van JWT tokens op dat deze vooraf gedaan moeten worden door een Bearer en een spatie, onder de header Authorization. De volledig naam wordt daarmee: 'Authorization: Bearer [TOKEN]'
+    Let er bij het meegeven van JWT tokens op dat deze voorafgedaan moeten worden door een Bearer en een spatie, onder de header Authorization. De volledig naam wordt daarmee: 'Authorization: Bearer [TOKEN]'
     
   version: 0.0.1
   title: 'Betaling API'
@@ -73,7 +73,7 @@ paths:
   '/applicatie/{id}':
     get:
       summary: 'Haal op'
-      description: 'Haalt een Applicatie op'
+      description: 'Haal een Applicatie op'
       tags:
         - Applicatie
       operationId: getApplicatieItem
@@ -101,7 +101,7 @@ paths:
           description: 'Resource not found'
     put:
       summary: 'Werk bij'
-      description: 'Werk een Applicatie bij'
+      description: 'Werk een Applicatie bij.'
       responses:
         202:
           description: 'applicatie bijgewerkt'
@@ -134,7 +134,7 @@ paths:
   '/applicatie/{id}/log':
     get:
       summary: Logboek
-      description: 'Bekijk de wijzigingen op dit Applicatie object'
+      description: 'Bekijk de wijzigingen op dit Applicatie object.'
       consumes:
         - application/json
         - text/html
@@ -996,9 +996,9 @@ paths:
         - application/json
       responses:
         200:
-          description: 'Applicatie succesvol ingeloged'
+          description: 'Applicatie succesvol ingelogd'
         401:
-          description: 'Applicatie niet ingeloged'
+          description: 'Applicatie niet ingelogd'
       tags:
         - Applicatie
       operationId: loginApplicatieCollection
@@ -1064,7 +1064,7 @@ components:
           maxLength: 16
           minLength: 5
           example: NietZoGeheim
-          description: 'Een door de organisatie opgegeven sleutel waarmee deze Applicatie zich identificeerd bij het ophalen van en JWT token.'
+          description: 'Een door de organisatie opgegeven sleutel waarmee deze Applicatie zich identificeert bij het ophalen van en JWT token.'
         scopes:
           type: array
           example: '[]'
@@ -1075,7 +1075,7 @@ components:
           required: 'true'
           maxLength: 9
           minLength: 8
-          description: 'Het RSIN van de organisatie waartoe deze Applicatie behoord. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef.'
+          description: 'Het RSIN van de organisatie waartoe deze Applicatie behoort. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef.'
         isActief:
           description: 'Word gebruikt om aan te geven of deze applicatie actief is (en mag inloggen) of dat deze slechts wordt gebruikt voor archief doeleinden'
           type: boolean
@@ -1094,7 +1094,7 @@ components:
           required: 'true'
           maxLength: 255
           format: uri
-          description: 'De contactpersoon voor deze Applicatie, die bijvoorbeeld word verwittigd bij misbruik.'
+          description: 'De contactpersoon voor deze Applicatie, die bijvoorbeeld wordt verwittigd bij misbruik.'
         fullname:
           readOnly: true
           type: string
@@ -1102,7 +1102,7 @@ components:
           readOnly: true
           type: boolean
         username:
-          description: 'Username wordt door symfony gebruikt voor de gebruikersnaam maar in de context commonground component api gebruken we hem niet en onderdruken we hem door hem aan geen groupen toe te wijzen'
+          description: 'Username wordt door symfony gebruikt voor de gebruikersnaam maar in de context common ground component api gebruiken we hem niet en onderdrukken we hem door hem aan geen groepen toe te wijzen'
         password:
           readOnly: true
         salt:
@@ -1123,7 +1123,7 @@ components:
           maxLength: 16
           minLength: 5
           example: NietZoGeheim
-          description: 'Een door de organisatie opgegeven sleutel waarmee deze Applicatie zich identificeerd bij het ophalen van en JWT token.'
+          description: 'Een door de organisatie opgegeven sleutel waarmee deze Applicatie zich identificeert bij het ophalen van en JWT token.'
     'Applicatie-applicatie:lezen':
       type: object
       description: 'Een Applicatie die is geidentificeerd en geautoriceerd om namens een organisatie wijzigingen uit te voeren'
@@ -1141,7 +1141,7 @@ components:
           required: 'true'
           maxLength: 9
           minLength: 8
-          description: 'Het RSIN van de organisatie waartoe deze Applicatie behoord. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef.'
+          description: 'Het RSIN van de organisatie waartoe deze Applicatie behoort. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef.'
         isActief:
           description: 'Word gebruikt om aan te geven of deze applicatie actief is (en mag inloggen) of dat deze slechts wordt gebruikt voor archief doeleinden'
           type: boolean
@@ -1160,7 +1160,7 @@ components:
           required: 'true'
           maxLength: 255
           format: uri
-          description: 'De contactpersoon voor deze Applicatie, die bijvoorbeeld word verwittigd bij misbruik.'
+          description: 'De contactpersoon voor deze Applicatie, die bijvoorbeeld wordt verwittigd bij misbruik.'
     'Applicatie-applicatie:maken':
       type: object
       description: 'Een Applicatie die is geidentificeerd en geautoriceerd om namens een organisatie wijzigingen uit te voeren'
@@ -1175,7 +1175,7 @@ components:
           maxLength: 16
           minLength: 5
           example: NietZoGeheim
-          description: 'Een door de organisatie opgegeven sleutel waarmee deze Applicatie zich identificeerd bij het ophalen van en JWT token.'
+          description: 'Een door de organisatie opgegeven sleutel waarmee deze Applicatie zich identificeert bij het ophalen van en JWT token.'
         scopes:
           type: array
           example: '[]'
@@ -1186,7 +1186,7 @@ components:
           required: 'true'
           maxLength: 9
           minLength: 8
-          description: 'Het RSIN van de organisatie waartoe deze Applicatie behoord. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef.'
+          description: 'Het RSIN van de organisatie waartoe deze Applicatie behoort. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef.'
         contactPersoon:
           title: Ambtenaar
           type: url
@@ -1194,13 +1194,13 @@ components:
           required: 'true'
           maxLength: 255
           format: uri
-          description: 'De contactpersoon voor deze Applicatie, die bijvoorbeeld word verwittigd bij misbruik.'
+          description: 'De contactpersoon voor deze Applicatie, die bijvoorbeeld wordt verwittigd bij misbruik.'
     Factuur:
       type: object
       description: Factuur
       properties:
         id:
-          description: 'Het identificatie nummer van deze Factuur <br /><b>Schema:</b> <a href="https://schema.org/identifier">https://schema.org/identifier</a>'
+          description: 'Het identificatienummer van deze Factuur <br /><b>Schema:</b> <a href="https://schema.org/identifier">https://schema.org/identifier</a>'
           type: integer
         referentie:
           title: Organisatie
@@ -1209,11 +1209,11 @@ components:
           required: 'true'
           maxLength: 14
           minLength: 1
-          description: 'Het RSIN van de Niet-natuurlijk persoon zijnde de organisatie die dit Document heeft gecreeerd. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef'
+          description: 'Het RSIN van de Niet-natuurlijk persoon zijnde de organisatie die dit Document heeft gecreëerd. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef'
         identificatie:
           type: string
           example: 6a36c2c4-213e-4348-a467-dfa3a30f64aa
-          description: 'De unieke identificatie van de factuur binnen de organisatie die deze Factuur heeft gecreeerd. <br /><b>Schema:</b> <a href="https://schema.org/identifier">https://schema.org/identifier</a>'
+          description: 'De unieke identificatie van de factuur binnen de organisatie die deze Factuur heeft gecreëerd. <br /><b>Schema:</b> <a href="https://schema.org/identifier">https://schema.org/identifier</a>'
           maxLength: 40
         bronOrganisatie:
           title: bronOrganisatie
@@ -1222,7 +1222,7 @@ components:
           required: 'true'
           maxLength: 9
           minLength: 8
-          description: 'Het RSIN van de organisatie waartoe deze Factuur behoord. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef. <br> Het RSIN word bepaald aan de hand van de gauthenticeerde applicatie en kan niet worden overschreven'
+          description: 'Het RSIN van de organisatie waartoe deze Factuur behoort. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef. <br> Het RSIN wordt bepaald aan de hand van de geauthenticeerde applicatie en kan niet worden overschreven'
         registratiedatum:
           description: 'Het tijdstip waarop dit Ambtenaren object is aangemaakt'
           type: string
@@ -1238,16 +1238,16 @@ components:
           required: 'true'
           maxLength: 255
           format: uri
-          description: 'Het contact persoon voor deze Factuur'
+          description: 'De contactpersoon voor deze Factuur'
         bronApplicaite:
-          description: 'De applicatie die verantwoordelijk is voor het object, en daarvoor de rechten beheerd en uitgeeft, en het eindoordeel heeft met betrekking tot waarheidsvinding.'
+          description: 'De applicatie die verantwoordelijk is voor het object, en daarvoor de rechten beheert en uitgeeft, en het eindoordeel heeft met betrekking tot waarheidsvinding.'
           type: string
     Factuur-read:
       type: object
       description: Factuur
       properties:
         id:
-          description: 'Het identificatie nummer van deze Factuur <br /><b>Schema:</b> <a href="https://schema.org/identifier">https://schema.org/identifier</a>'
+          description: 'Het identificatienummer van deze Factuur <br /><b>Schema:</b> <a href="https://schema.org/identifier">https://schema.org/identifier</a>'
           type: integer
         referentie:
           title: Organisatie
@@ -1256,11 +1256,11 @@ components:
           required: 'true'
           maxLength: 14
           minLength: 1
-          description: 'Het RSIN van de Niet-natuurlijk persoon zijnde de organisatie die dit Document heeft gecreeerd. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef'
+          description: 'Het RSIN van de Niet-natuurlijk persoon zijnde de organisatie die dit Document heeft gecreëerd. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef'
         identificatie:
           type: string
           example: 6a36c2c4-213e-4348-a467-dfa3a30f64aa
-          description: 'De unieke identificatie van de factuur binnen de organisatie die deze Factuur heeft gecreeerd. <br /><b>Schema:</b> <a href="https://schema.org/identifier">https://schema.org/identifier</a>'
+          description: 'De unieke identificatie van de factuur binnen de organisatie die deze Factuur heeft gecreëerd. <br /><b>Schema:</b> <a href="https://schema.org/identifier">https://schema.org/identifier</a>'
           maxLength: 40
         bronOrganisatie:
           title: bronOrganisatie
@@ -1269,7 +1269,7 @@ components:
           required: 'true'
           maxLength: 9
           minLength: 8
-          description: 'Het RSIN van de organisatie waartoe deze Factuur behoord. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef. <br> Het RSIN word bepaald aan de hand van de gauthenticeerde applicatie en kan niet worden overschreven'
+          description: 'Het RSIN van de organisatie waartoe deze Factuur behoort. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef. <br> Het RSIN wordt bepaald aan de hand van de geauthenticeerde applicatie en kan niet worden overschreven'
         registratiedatum:
           description: 'Het tijdstip waarop dit Ambtenaren object is aangemaakt'
           type: string
@@ -1285,9 +1285,9 @@ components:
           required: 'true'
           maxLength: 255
           format: uri
-          description: 'Het contact persoon voor deze Factuur'
+          description: 'De contactpersoon voor deze Factuur'
         bronApplicaite:
-          description: 'De applicatie die verantwoordelijk is voor het object, en daarvoor de rechten beheerd en uitgeeft, en het eindoordeel heeft met betrekking tot waarheidsvinding.'
+          description: 'De applicatie die verantwoordelijk is voor het object, en daarvoor de rechten beheert en uitgeeft, en het eindoordeel heeft met betrekking tot waarheidsvinding.'
           type: string
     FactuurBetaling:
       type: object
