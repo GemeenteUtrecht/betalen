@@ -10,7 +10,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * FactuurBetaling
+ * FactuurRegel
  * 
  * Beschrijving
  * 
@@ -24,15 +24,14 @@ use Symfony\Component\Serializer\Annotation\Groups;
  * @package		Commen Ground
  * @subpackage  Financien
  * 
- * @ApiResource
  * @ORM\Entity
  * @ORM\HasLifecycleCallbacks
  */
-class FactuurBetaling
+class FactuurRegel
 {
 	
 	/**
-	 * Het identificatie nummer van deze betaling <br /><b>Schema:</b> <a href="https://schema.org/identifier">https://schema.org/identifier</a>
+	 * Het identificatie nummer van deze regel <br /><b>Schema:</b> <a href="https://schema.org/identifier">https://schema.org/identifier</a>
 	 * 
 	 * @var int|null
 	 *
