@@ -103,30 +103,6 @@ class Factuur implements StringableInterface
 	public $id;
 	
 	/**
-	 * Het RSIN van de Niet-natuurlijk persoon zijnde de organisatie die dit Document heeft gecreëerd. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef
-	 *
-	 * @var string
-	 * @ORM\Column(
-	 *     type     = "string"
-	 * )
-	 * @Groups({"read", "write"})
-	 * @ApiProperty(
-	 *     attributes={
-	 *         "openapi_context"={
-	 *             "title"="Organisatie",
-	 *             "type"="string",
-	 *             "example"="123456789",
-	 *             "required"="true",
-	 *             "maxLength"=14,
-	 *             "minLength"=1,
-	 *             "description"="Het RSIN van de Niet-natuurlijk persoon zijnde de organisatie die dit document heeft gecreëerd. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef"
-	 *         }
-	 *     }
-	 * )
-	 */
-	public $referentie;
-	
-	/**
 	 * De unieke identificatie van de factuur binnen de organisatie die deze Factuur heeft gecreëerd. <br /><b>Schema:</b> <a href="https://schema.org/identifier">https://schema.org/identifier</a>
 	 *
 	 * @var string
