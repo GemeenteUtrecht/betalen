@@ -2,7 +2,7 @@ openapi: 3.0.2
 info:
   description: |
     # Welkom innovator!
-    Fijn dat je de tijd en moeite hebt genomen om je te verdiepen in dit component. 
+    Fijn dat je de tijd en moeite hebt genomen om je te verdiepen in dit component. Het "Betaling" component is ontwikkeld voor de gemeente Utrecht en heeft als doel het verwerken van betalingen. Dit component gaat vaak hand in hand met de componenten Order, Producten en diensten, maar dit is niet altijd noodzakelijk.  
     
     # Introductie               
     Het "betalen" component is ontwikkeld voor de gemeente Utrecht en heeft als doel een betalingen te registreren en af te handelen voor objecten uit andere componenten. Dit stelt je in staat om voor deze objecten facturen aan te maken en te beheren.
@@ -56,7 +56,7 @@ info:
     
     Let er bij het meegeven van JWT tokens op dat deze voorafgegaan moeten worden door een Bearer en een spatie, onder de header Authorization. De volledig naam wordt daarmee: 'Authorization: Bearer [TOKEN]'
     
-  version: 0.0.1
+  version: '0.0.21 Alpha'
   title: 'Betaling API'
   termsOfService: 'http://www.zaakonline.nl/terms/'
   contact:
@@ -73,7 +73,7 @@ paths:
   '/applicatie/{id}':
     get:
       summary: 'Haal op'
-      description: 'Haal een Applicatie op'
+      description: 'Haal een Applicatie op.'
       tags:
         - Applicatie
       operationId: getApplicatieItem
@@ -101,7 +101,7 @@ paths:
           description: 'Resource not found'
     put:
       summary: 'Werk bij'
-      description: 'Werk een Applicatie bij'
+      description: 'Werk een Applicatie bij.'
       tags:
         - Applicatie
       operationId: putApplicatieItem
@@ -144,7 +144,7 @@ paths:
   '/applicatie/{id}/log':
     get:
       summary: Logboek
-      description: 'Bekijk de wijzigingen op dit Applicatie object'
+      description: 'Bekijk de wijzigingen op dit Applicatie object.'
       tags:
         - Applicatie
       operationId: logApplicatieItem
@@ -539,7 +539,7 @@ paths:
   /login_check:
     post:
       summary: 'Token halen'
-      description: 'Inloggen als Applicatie en JWT Token ophalen'
+      description: 'Inloggen als Applicatie en JWT Token ophalen.'
       tags:
         - Applicatie
       operationId: loginApplicatieCollection
@@ -581,7 +581,7 @@ paths:
   /registreer:
     post:
       summary: Registreren
-      description: 'Registreer een nieuwe Applicatie voor dit component'
+      description: 'Registreer een nieuwe Applicatie voor dit component.'
       tags:
         - Applicatie
       operationId: registerApplicatieCollection
@@ -654,10 +654,10 @@ components:
           minLength: 8
           description: 'Het RSIN van de organisatie waartoe deze Applicatie behoort. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef.'
         isActief:
-          description: 'Wordt gebruikt om aan te geven of deze applicatie actief is (en mag inloggen) of dat deze slechts wordt gebruikt voor archief doeleinden'
+          description: 'Wordt gebruikt om aan te geven of deze applicatie actief is (en mag inloggen) of dat deze slechts wordt gebruikt voor archief doeleinden.'
           type: boolean
         registratiedatum:
-          description: 'Het tijdstip waarop deze Applicatie is aangemaakt'
+          description: 'Het tijdstip waarop deze Applicatie is aangemaakt.'
           type: string
           format: date-time
         wijzigingsdatum:
@@ -720,10 +720,10 @@ components:
           minLength: 8
           description: 'Het RSIN van de organisatie waartoe deze Applicatie behoort. Dit moet een geldig RSIN zijn van 9 nummers en voldoen aan https://nl.wikipedia.org/wiki/Burgerservicenummer#11-proef.'
         isActief:
-          description: 'Wordt gebruikt om aan te geven of deze applicatie actief is (en mag inloggen) of dat deze slechts wordt gebruikt voor archief doeleinden'
+          description: 'Wordt gebruikt om aan te geven of deze applicatie actief is (en mag inloggen) of dat deze slechts wordt gebruikt voor archief doeleinden.'
           type: boolean
         registratiedatum:
-          description: 'Het tijdstip waarop deze Applicatie is aangemaakt'
+          description: 'Het tijdstip waarop deze Applicatie is aangemaakt.'
           type: string
           format: date-time
         wijzigingsdatum:

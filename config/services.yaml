@@ -13,7 +13,7 @@ parameters:
         info:
             description: |
                 # Welkom innovator!
-                Fijn dat je de tijd en moeite hebt genomen om je te verdiepen in dit component. 
+                Fijn dat je de tijd en moeite hebt genomen om je te verdiepen in dit component. Het "Betaling" component is ontwikkeld voor de gemeente Utrecht en heeft als doel het verwerken van betalingen. Dit component gaat vaak hand in hand met de componenten Order, Producten en diensten, maar dit is niet altijd noodzakelijk.  
                 
                 # Introductie               
                 Het "betalen" component is ontwikkeld voor de gemeente Utrecht en heeft als doel een betalingen te registreren en af te handelen voor objecten uit andere componenten. Dit stelt je in staat om voor deze objecten facturen aan te maken en te beheren.
@@ -67,7 +67,7 @@ parameters:
                 
                 Let er bij het meegeven van JWT tokens op dat deze voorafgegaan moeten worden door een Bearer en een spatie, onder de header Authorization. De volledig naam wordt daarmee: 'Authorization: Bearer [TOKEN]'
 
-            version: 0.0.1
+            version: 0.0.21 Alpha
             title: 'Betaling API'
             termsOfService: 'http://www.zaakonline.nl/terms/'
             contact:
